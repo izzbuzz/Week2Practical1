@@ -1,6 +1,17 @@
 # Week 2 Practical 1 - CSS Fundamentals
 
-This practical is all about getting you started with CSS to add style to your HTML documents. These activities will likely take you more than an hour. Aim to finish them outside of class.
+This practical is all about getting you started with CSS to add style to your HTML documents.
+
+## Stage 0: Make sure Live Preview opens HTML files in Chrome
+By default, Live Preview opens HTML pages in an embedded window in VSCode. From today on, it is important that HTML pages open in Chrome so you can take advantage of the Developer Tools. Debugging CSS is extra painful in the embedded preview!
+
+In VS Code:
+1. Go to Settings > Settings. Look for the gear / cog icon in the bottom left of the application.
+2. In the search bar, type Live Preview.
+3. Find "Live Preview: Custom External Browser" and set it to "Chrome".
+4. Find "Live Preview: Open Preview Target" and set it to "External Browser".
+
+Now when you run an HTML file using Live Preview, it should open in Chrome.
 
 ## Stage 1: Writing Internal Styles
 The three exercises in this stage walk you through a few useful text styling approaches and a few less commonly used CSS properties. You will need the HTML files available in this repository.
