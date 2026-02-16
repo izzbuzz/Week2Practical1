@@ -1,6 +1,8 @@
 # Week 2 Practical 1 - CSS Fundamentals
 
-This practical is all about getting you started with CSS to add style to your HTML documents.
+This practical is all about getting you started with CSS to add style to your HTML documents. It is also about getting used to using the CSS reference to look up style rules to achieve the design you want. 
+
+[W3Schools CSS Reference](https://www.w3schools.com/cssref/index.php)
 
 ## Stage 0: Make sure Live Preview opens HTML files in Chrome
 By default, Live Preview opens HTML pages in an embedded window in VSCode. From today on, it is important that HTML pages open in Chrome so you can take advantage of the Developer Tools. Debugging CSS is extra painful in the embedded preview!
@@ -19,7 +21,21 @@ Open the three files (exercise1_1.html, exercise1_2.html, exercise 1_3.html) in 
 
 For each exercise, you will need to add `<style></style>` elements inside the `<head>` of the HTML file, then add your CSS inside the `<style>` elements. **You must only write code inside the `<style>` elements—do not modify the rest of the HTML in any way. **
 
-Links to relevant documentation are provided in places. Keep the CSS documentation (either MDN or W3Schools, or both) handy as you work. You can also try typing properties straight into VS Code and exploring the auto-complete suggestions.
+The head of each page should look like this:
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>...</title>
+    <meta charset="utf-8">
+    <style>
+      /** Your CSS here **/
+    </style>
+  </head>
+</html>
+```
+
+Links to relevant documentation are provided in places, but get in the habit of having CSS documentation ([W3Schools recommended](https://www.w3schools.com/cssref/index.php)) open as you work. You can also try typing properties straight into VS Code and exploring the auto-complete suggestions.
 
 ### Exercise 1.1: Styling with pseudo selectors
 Style exercise1_1.html so it looks a bit like an old book, as pictured below. Links to the relevant properties and additional guidance is provided after the screenshot. 
@@ -39,10 +55,59 @@ The key features are:
 If you have substantial CSS experience, try to create the expected output without following the guidance below!
 
 _**Step-by-step guidance**_
-1. Add a `body` selector to your CSS section. Then, in the declaration following the `body` selector, set the following properties: `background-color`, `color`, and `padding` with values of your choosing. There should now be more space between the text and the left and right edges of the screen, and the background and text colours should look a bit more book-like.
-2. Next, set the font families. You will need a selector and declaration for the `h1` element, a separate selector and declaration for the `p` elements, and an additional selector and declaration that will use the [:first-of-type pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type) to give the first paragraph a different font than the others. You can choose the specific font families, but the heading and first paragraph should have a serif `font-family`, while the other paragraphs be sans-serif.
-3. Add rules to the declaration for `p` elements that set values for `line-height` and `text-align`. The line height should be a little larger than default (experiment!) to increase the space between lines in a paragraph. The alignment should be justified. The `font-size` of the first paragraph also needs to be made bigger than other paragraphs.
-4. Finally, you are ready to style the first letter of the first paragraph. You will need to add a new selector to your CSS. You should already know how to write a selector for the first paragraph if you’ve completed step 2. To select the first letter of the first paragraph, add the [::first-letter](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter) pseudo-selector immediately  after the first paragraph selector. To create the decoration shown in the screen shot, I set rules for the following properties: 
+
+_**Step 1**_
+
+Add a `body` selector to your CSS section:
+
+```
+<style>
+  body {
+    
+  }
+</style>
+```
+Then, in the declaration following the `body` selector, set the following properties with values of your choosing: 
+- `background-color`
+- `color`
+- `padding`  
+
+There should now be more space between the text and the left and right edges of the screen, and the background and text colours should look a bit more book-like. Here's an example (make yours different!):
+
+```
+<style>
+  body {
+    background-color: #f3f2ea;
+    color: #201e1e;
+    padding: 50px;
+  }
+</style>
+```
+
+_**Step 2**_
+
+Next, set the font families. You will need: 
+- a selector and declaration for the `h1` element
+- a separate selector and declaration for the `p` elements
+- an additional selector and declaration that will use the [:first-of-type pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type) to give the first paragraph a different font than the others. 
+
+You can choose the specific font families, but the heading and first paragraph should have a serif `font-family`, while the other paragraphs be sans-serif.
+
+_**Step 3**_
+
+Add rules to the declaration for `p` elements that set values for `line-height` and `text-align`. 
+
+The line height should be a little larger than default (experiment!) to increase the space between lines in a paragraph. 
+
+The alignment should be justified. 
+
+The `font-size` of the first paragraph also needs to be made bigger than other paragraphs.
+
+_**Step 4**_
+
+Finally, you are ready to style the first letter of the first paragraph. You will need to add a new selector to your CSS. You should already know how to write a selector for the first paragraph if you’ve completed step 2. To select the first letter of the first paragraph, add the [::first-letter](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter) pseudo-selector immediately  after the first paragraph selector. 
+
+To create the decoration shown in the screen shot, I set rules for the following properties: 
 - `font-size` (bigger than the rest of the paragraph)
 - `font-weight` (bolder)
 - `margin-right` (added extra space following the letter)
